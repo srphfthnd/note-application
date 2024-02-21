@@ -25,7 +25,7 @@ npm start
 ```bash
 curl --location 'http://localhost:3000/notes'
 ```
-![image](https://github.com/srphfthnd/note-application/assets/30517958/6166c3b3-96e6-4127-8ab3-ff0091c3c898)
+![image](https://github.com/srphfthnd/note-application/assets/30517958/0fed8586-6e10-4f04-9e2b-1f073217f792)
 
 
 #### Get specific note.
@@ -33,9 +33,8 @@ curl --location 'http://localhost:3000/notes'
 ```bash
 curl --location 'http://localhost:3000/notes/1'
 ```
-![image](https://github.com/srphfthnd/note-application/assets/30517958/90ef0412-5e8f-4782-a997-cd330b4062ee)
-![image](https://github.com/srphfthnd/note-application/assets/30517958/750a34b8-41ca-44d7-bb5c-0655017703d6)
-
+![image](https://github.com/srphfthnd/note-application/assets/30517958/e589afc0-5aad-4894-9c86-0c425aa243df)
+![image](https://github.com/srphfthnd/note-application/assets/30517958/901efeee-727d-4e2d-a546-90dbf814089e)
 
 
 #### Create new note.
@@ -48,9 +47,9 @@ curl --location 'http://localhost:3000/notes' \
     "body": "This is the body of newly created note."
 }'
 ```
-![image](https://github.com/srphfthnd/note-application/assets/30517958/f366943c-dc8d-4465-a8a2-3de18fc87b5d)
-![image](https://github.com/srphfthnd/note-application/assets/30517958/95870ce6-886e-4516-8145-f936317e11dc)
-
+![image](https://github.com/srphfthnd/note-application/assets/30517958/ef7c65bf-3ae2-40d1-83a5-7c17fa7b8ee7)
+![image](https://github.com/srphfthnd/note-application/assets/30517958/5e57c48e-50d3-4cdd-90e3-61ef8de27418)
+![image](https://github.com/srphfthnd/note-application/assets/30517958/32faa4a8-5459-4c9c-98ac-90c1a2b5c40a)
 
 
 #### Make a change on specific note.
@@ -63,9 +62,9 @@ curl --location --request PUT 'http://localhost:3000/notes/1' \
     "body": "This is newly changed note."
 }'
 ```
-![image](https://github.com/srphfthnd/note-application/assets/30517958/38377e56-05ee-4464-b43c-b0106f8c345a)
-![image](https://github.com/srphfthnd/note-application/assets/30517958/e2760a06-98e9-494a-8dab-94ac57c7a2d3)
-
+![image](https://github.com/srphfthnd/note-application/assets/30517958/74981fb4-cc03-4bb7-ae95-4abe53314b9b)
+![image](https://github.com/srphfthnd/note-application/assets/30517958/8551a49c-4da3-4da0-84e6-802ca9e6e224)
+![image](https://github.com/srphfthnd/note-application/assets/30517958/251a4216-d1b3-432a-b1ee-1080d9378747)
 
 
 #### Delete specific note.
@@ -74,10 +73,9 @@ curl --location --request PUT 'http://localhost:3000/notes/1' \
 curl --location --request DELETE 'http://localhost:3000/notes/5' \
 --data ''
 ```
-![image](https://github.com/srphfthnd/note-application/assets/30517958/62984658-10eb-44ef-a25e-556f21124627)
-![image](https://github.com/srphfthnd/note-application/assets/30517958/e96573c7-ac27-4dfb-9a5e-87aa32269edb)
-![image](https://github.com/srphfthnd/note-application/assets/30517958/58a3c9e0-2e6b-4b76-978f-61b7e28f62ca)
-
+![image](https://github.com/srphfthnd/note-application/assets/30517958/ca4bd5f4-31f3-4c1d-8fcc-2bca617ebe77)
+![image](https://github.com/srphfthnd/note-application/assets/30517958/1929606d-aa1c-4b5a-a4bc-7221eb65f54d)
+![image](https://github.com/srphfthnd/note-application/assets/30517958/05f25279-d738-4670-a38c-601588759058)
 
 
 ## Contributing
