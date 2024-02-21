@@ -12,12 +12,13 @@ export function notFound(
 }
 
 export function errorHandler(
-  error: Error,
+  error: any,
   request: Request,
   response: Response<ErrorResponse>,
   next: NextFunction
 ) {
-  const statusCode = response.statusCode !== 200 ? response.statusCode : 500;
+  const statusCode =
+    response.statusCode !== 200 ? response.statusCode : error.status ?? 500;
   response.status(statusCode);
   response.json({
     message: error.message?.replace(/\\|"/g, ""),

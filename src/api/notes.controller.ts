@@ -24,6 +24,7 @@ router.get<{ id: string }, { note?: Note; message?: string }>(
     const { message, note } = getNote(request.params.id);
     try {
       if (!note) {
+        response.status(404);
         return response.json({ message });
       }
       return response.json({ note });
