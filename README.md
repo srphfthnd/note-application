@@ -38,28 +38,27 @@ curl --location 'http://localhost:3000/notes/1'
 curl --location 'http://localhost:3000/notes' \
 --header 'Content-Type: application/json' \
 --data '{
-    "content": "I am here to create note."
+    "title": "This is newly created note",
+    "body": "This is the body of newly created note."
 }'
 ```
 
 #### Make a change on specific note.
 
 ```bash
-curl --location --request PUT 'http://localhost:3000/notes/2' \
+curl --location --request PUT 'http://localhost:3000/notes/1' \
 --header 'Content-Type: application/json' \
 --data '{
-    "content": "Add note here."
+    "title": "Testing",
+    "body": "This is newly changed note."
 }'
 ```
 
 #### Delete specific note.
 
 ```bash
-curl --location --request DELETE 'http://localhost:3000/notes/6' \
---header 'Content-Type: application/json' \
---data '{
-    "content": "Updated note."
-}'
+curl --location --request DELETE 'http://localhost:3000/notes/5' \
+--data ''
 ```
 
 ## Contributing
