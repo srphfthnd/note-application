@@ -8,7 +8,7 @@ const validate = <T>(schema: ZodSchema, data: T) => {
   if (!result.success) {
     const r = result as SafeParseError<typeof schema>;
     const message = r.error.format();
-    throw new Error(JSON.stringify(message));
+    throw new Error(JSON.stringify(message).replace(/\\/g, ""));
   }
 };
 
@@ -32,11 +32,11 @@ export function getNote(id: string | number) {
 
 export function createNote(note: WithoutId<Note>) {
   validate(noteSchema.omit({ id: true }), note);
-  const { content } = note;
+  const { ...rest } = note;
 
   const newNote: Note = {
     id: getNextId(),
-    content,
+    ...rest,
   };
 
   const success = db.updateTable("notes", (current) => current.concat(newNote));

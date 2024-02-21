@@ -20,6 +20,6 @@ export function errorHandler(
   const statusCode = response.statusCode !== 200 ? response.statusCode : 500;
   response.status(statusCode);
   response.json({
-    message: error.message,
+    message: error.message?.replace(/\\|"/g, ""),
   });
 }

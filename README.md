@@ -44,7 +44,8 @@ curl --location 'http://localhost:3000/notes/1'
 curl --location 'http://localhost:3000/notes' \
 --header 'Content-Type: application/json' \
 --data '{
-    "content": "I am here to create note."
+    "title": "This is newly created note",
+    "body": "This is the body of newly created note."
 }'
 ```
 ![image](https://github.com/srphfthnd/note-application/assets/30517958/f366943c-dc8d-4465-a8a2-3de18fc87b5d)
@@ -55,10 +56,11 @@ curl --location 'http://localhost:3000/notes' \
 #### Make a change on specific note.
 
 ```bash
-curl --location --request PUT 'http://localhost:3000/notes/2' \
+curl --location --request PUT 'http://localhost:3000/notes/1' \
 --header 'Content-Type: application/json' \
 --data '{
-    "content": "Add note here."
+    "title": "Testing",
+    "body": "This is newly changed note."
 }'
 ```
 ![image](https://github.com/srphfthnd/note-application/assets/30517958/38377e56-05ee-4464-b43c-b0106f8c345a)
@@ -69,11 +71,8 @@ curl --location --request PUT 'http://localhost:3000/notes/2' \
 #### Delete specific note.
 
 ```bash
-curl --location --request DELETE 'http://localhost:3000/notes/6' \
---header 'Content-Type: application/json' \
---data '{
-    "content": "Updated note."
-}'
+curl --location --request DELETE 'http://localhost:3000/notes/5' \
+--data ''
 ```
 ![image](https://github.com/srphfthnd/note-application/assets/30517958/62984658-10eb-44ef-a25e-556f21124627)
 ![image](https://github.com/srphfthnd/note-application/assets/30517958/e96573c7-ac27-4dfb-9a5e-87aa32269edb)
