@@ -26,7 +26,6 @@ export function getNote(id: string | number) {
   const notes = db.getTable("notes");
   const note = notes.find((values) => values.id === +id);
 
-  // return note as Note;
   return { message, note };
 }
 
@@ -56,7 +55,7 @@ export function updateNote(note: Note) {
 
   if (!Boolean(fetchedNote)) {
     message = fetchedError;
-    return { message };
+    throw { message, status: 404 };
   }
 
   const { id, ...rest } = { ...fetchedNote, ...note };
@@ -84,7 +83,7 @@ export function deleteNote(id: string | number) {
 
   if (!Boolean(fetchedNote)) {
     message = fetchedError;
-    return { message };
+    throw { message, status: 404 };
   }
 
   const success = db.updateTable("notes", (current) =>
@@ -95,5 +94,6 @@ export function deleteNote(id: string | number) {
     message = "Note deleted successfully";
   }
 
+  const error = new Error(message);
   return { message };
 }
